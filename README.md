@@ -31,6 +31,10 @@ https://mcp.apify.com?tools=metqo/walmart-product-reviews,metqo/amazon-public-re
 | **Cursor / VS Code / Windsurf** | Add to your MCP config: `{ "mcpServers": { "metqo": { "url": "<server URL>" } } }` |
 | **Claude Code** | `/plugin marketplace add metqo-data/metqo-plugins` then `/plugin install metqo-reviews@metqo-data` |
 
+**Metqo's own MCP server** (works in every client, uses your Apify token): `https://mcp.metqo.com/mcp` with header `Authorization: Bearer <Apify API token>`.
+
+**Skill for Manus and other agents:** in Manus → Skills → + Add → **Import from GitHub** → `https://github.com/metqo-data/metqo-plugins` (skill: `skills/metqo-review-insights`).
+
 Then ask: *"What do verified buyers complain about most for Walmart item 10450114? Group by topic."*
 
 Also listed in the official MCP Registry as `io.github.trueleaftech786/metqo-reviews`.
