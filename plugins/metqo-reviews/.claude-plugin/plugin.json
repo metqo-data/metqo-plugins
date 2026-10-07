@@ -1,0 +1,8 @@
+{
+  "name": "metqo-reviews",
+  "description": "Analyse Walmart and Amazon product reviews: top complaints, topic sentiment, verified-buyer filters and new-review monitoring. Uses Metqo's pay-per-result scrapers on Apify.",
+  "version": "0.1.0",
+  "author": { "name": "Metqo Data", "email": "support@metqo.com" },
+  "homepage": "https://apify.com/metqo",
+  "keywords": ["walmart", "amazon", "reviews", "sentiment", "ecommerce", "apify"]
+}

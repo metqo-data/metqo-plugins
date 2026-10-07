@@ -1,0 +1,12 @@
+{
+  "name": "io.github.metqo-data/metqo-reviews",
+  "description": "Walmart and Amazon review insights: complaints, topic sentiment, verified-buyer filters and new-review monitoring. Pay-per-result via Apify.",
+  "version": "0.1.0",
+  "repository": { "url": "https://github.com/metqo-data/metqo-plugins", "source": "github" },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com?tools=metqo/walmart-product-reviews,metqo/amazon-public-reviews"
+    }
+  ]
+}

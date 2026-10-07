@@ -1,0 +1,12 @@
+{
+  "name": "metqo-data",
+  "description": "E-commerce review and product data tools from Metqo Data",
+  "owner": { "name": "Metqo Data", "email": "support@metqo.com" },
+  "plugins": [
+    {
+      "name": "metqo-reviews",
+      "source": "./plugins/metqo-reviews",
+      "description": "Turn Walmart and Amazon reviews into complaint and topic-sentiment reports, powered by Metqo's Apify scrapers"
+    }
+  ]
+}
