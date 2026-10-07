@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.metqo-data/metqo-reviews",
+  "name": "io.github.trueleaftech786/metqo-reviews",
   "description": "Walmart & Amazon review insights: complaints, topic sentiment, new-review alerts. Pay per result.",
   "version": "0.1.0",
   "repository": {
