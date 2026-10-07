@@ -1,8 +1,12 @@
 {
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.metqo-data/metqo-reviews",
-  "description": "Walmart and Amazon review insights: complaints, topic sentiment, verified-buyer filters and new-review monitoring. Pay-per-result via Apify.",
+  "description": "Walmart & Amazon review insights: complaints, topic sentiment, new-review alerts. Pay per result.",
   "version": "0.1.0",
-  "repository": { "url": "https://github.com/metqo-data/metqo-plugins", "source": "github" },
+  "repository": {
+    "url": "https://github.com/metqo-data/metqo-plugins",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
