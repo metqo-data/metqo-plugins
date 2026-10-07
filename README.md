@@ -15,13 +15,25 @@ Ask your AI assistant *"What do verified buyers complain about most for this Wal
 
 The plugin adds a `review-insights` skill and connects Apify's MCP server with the two Metqo tools. On first use, sign in to Apify (a free account works).
 
-## Use with any MCP client (Claude desktop, Cursor, VS Code)
+## Add it to your AI assistant
 
-Remote MCP server URL:
+Server URL (the same everywhere):
 
 ```
 https://mcp.apify.com?tools=metqo/walmart-product-reviews,metqo/amazon-public-reviews
 ```
+
+| Assistant | Steps |
+|---|---|
+| **Claude** (claude.ai, Desktop, mobile) | Settings → Connectors → **Add custom connector** → paste the URL → sign in to Apify |
+| **ChatGPT** | Settings → Apps & Connectors → enable **Developer mode** → **Create** → paste the URL, auth: OAuth |
+| **Manus** | Settings → Integrations → **Custom MCP Servers** → **Add Server** → paste the URL |
+| **Cursor / VS Code / Windsurf** | Add to your MCP config: `{ "mcpServers": { "metqo": { "url": "<server URL>" } } }` |
+| **Claude Code** | `/plugin marketplace add metqo-data/metqo-plugins` then `/plugin install metqo-reviews@metqo-data` |
+
+Then ask: *"What do verified buyers complain about most for Walmart item 10450114? Group by topic."*
+
+Also listed in the official MCP Registry as `io.github.trueleaftech786/metqo-reviews`.
 
 ## Pricing
 
