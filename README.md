@@ -17,19 +17,18 @@ The plugin adds a `review-insights` skill and connects Apify's MCP server with t
 
 ## Add it to your AI assistant
 
-Server URL (the same everywhere):
-
-```
-https://mcp.apify.com?tools=metqo/walmart-product-reviews,metqo/amazon-public-reviews
-```
+You need a free Apify account and its API token (apify.com → Settings → API & Integrations). Tools run on your Apify account and are billed per result.
 
 | Assistant | Steps |
 |---|---|
-| **Claude** (claude.ai, Desktop, mobile) | Settings → Connectors → **Add custom connector** → paste the URL → sign in to Apify |
-| **ChatGPT** | Settings → Apps & Connectors → enable **Developer mode** → **Create** → paste the URL, auth: OAuth |
-| **Manus** | Settings → Integrations → **Custom MCP Servers** → **Add Server** → paste the URL |
-| **Cursor / VS Code / Windsurf** | Add to your MCP config: `{ "mcpServers": { "metqo": { "url": "<server URL>" } } }` |
-| **Claude Code** | `/plugin marketplace add metqo-data/metqo-plugins` then `/plugin install metqo-reviews@metqo-data` |
+| **Claude** (claude.ai, Desktop, mobile) | Settings → Connectors → **Add custom connector** → URL `https://mcp.metqo.com/mcp?apifyToken=YOUR_APIFY_TOKEN` |
+| **ChatGPT** | Settings → Apps & Connectors → enable **Developer mode** → **Create** → same URL as Claude, authentication: none |
+| **Manus** | Settings → Integrations → **Custom MCP Servers** → **Add Server** → URL `https://mcp.metqo.com/mcp`, auth: Bearer token = your Apify token |
+| **Cursor / VS Code / Windsurf** | `{ "mcpServers": { "metqo": { "url": "https://mcp.metqo.com/mcp", "headers": { "Authorization": "Bearer YOUR_APIFY_TOKEN" } } } }` |
+| **Claude Code** | `claude mcp add --transport http metqo https://mcp.metqo.com/mcp --header "Authorization: Bearer YOUR_APIFY_TOKEN"` (or install the plugin below) |
+| **Smithery** | [smithery.ai/servers/support-yw1p/metqo-reviews](https://smithery.ai/servers/support-yw1p/metqo-reviews), which asks for your token |
+
+The server never logs request URLs or tokens. Prefer the header form wherever your client supports it.
 
 **Metqo's own MCP server** (works in every client, uses your Apify token): `https://mcp.metqo.com/mcp` with header `Authorization: Bearer <Apify API token>`.
 
